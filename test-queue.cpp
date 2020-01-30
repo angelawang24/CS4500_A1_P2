@@ -152,10 +152,6 @@ void test_queue_equals_object()
 	Object *t = new Object();
 	Object *u = new Object();
 
-	Object *s1 = new Object();
-	Object *t1 = new Object();
-	Object *u1 = new Object();
-
 	Queue *q1 = new Queue();
 	Queue *q2 = new Queue();
 
@@ -165,9 +161,9 @@ void test_queue_equals_object()
 	q1->push(t);
 	q1->push(u);
 
-	q2->push(s1);
-	q2->push(t1);
-	q2->push(u1);
+	q2->push(s);
+	q2->push(t);
+	q2->push(u);
 	t_true(q1->size() == 3);
 	t_true(q2->size() == 3);
 	t_true(q1->equals(q2));
@@ -183,10 +179,6 @@ void test_queue_equals_string()
 	String *t = new String("World");
 	String *u = new String("Bye");
 
-	String *s1 = new String("Hello");
-	String *t1 = new String("World");
-	String *u1 = new String("Bye");
-
 	Queue *q1 = new Queue();
 	Queue *q2 = new Queue();
 
@@ -196,9 +188,9 @@ void test_queue_equals_string()
 	q1->push(t);
 	q1->push(u);
 
-	q2->push(s1);
-	q2->push(t1);
-	q2->push(u1);
+	q2->push(s);
+	q2->push(t);
+	q2->push(u);
 	t_true(q1->size() == 3);
 	t_true(q2->size() == 3);
 	t_true(q1->equals(q2));
